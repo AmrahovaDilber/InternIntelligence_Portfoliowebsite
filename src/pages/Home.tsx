@@ -5,6 +5,7 @@ import AboutMe from "../components/HeroSection";
 import HeroContent from "../components/AboutMe";
 import Education from "../components/Education";
 import Experience from "../components/Experience";
+import Projects from "../components/Projects";
 
 const Home: React.FC = () => {
   return (
@@ -37,6 +38,9 @@ const Home: React.FC = () => {
         </section>
         <section className="w-full py-8 ">
         <Experience></Experience>
+        </section>
+        <section className="w-full py-8 ">
+        <Projects></Projects>
         </section>
         <section className="w-full py-8 ">
           <Contact></Contact>
