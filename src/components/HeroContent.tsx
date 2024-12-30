@@ -6,14 +6,18 @@ import {
   slideInFromTop,
 } from "../utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
+import Title from "./Title";
 
 const HeroContent:React.FC = () => {
   return (
-    <motion.div
+    <div>
+      <Title>About me</Title>
+      <motion.div
       initial="hidden"
       animate="visible"
-      className=" flex flex-row  mt-40 w-full z-[20]"
+      className=" flex flex-row    w-full z-[20]"
     >
+   
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromTop}
@@ -21,39 +25,53 @@ const HeroContent:React.FC = () => {
         >
           <SparklesIcon className="text-[#ffcc00] h-6 w-6" />
           <h1 className="Welcome-text text-[14px] text-white font-semibold">
-            Frontend Developer Portfolio
+            Frontend Developer 
           </h1>
-        </motion.div>
-
-        <motion.div
-          variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
-        >
-          <span>
-            Providing
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              {" "}
-              the best{" "}
-            </span>
-            project exprience
-          </span>
         </motion.div>
 
         <motion.p
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          I'm a Frontend Developer passionate about creating visually stunning
-          and highly interactive user experiences. With expertise in modern web
-          technologies like React, Next.js, and Tailwind CSS, I bring designs to
-          life with precision and creativity.
+           My name is Dilbər Əmrahova, and I am a front-end developer with a
+          passion for creating engaging, user-friendly digital experiences.
+          Currently, I am pursuing a degree in Information Technology at the
+          University of Economics. Throughout my learning journey, I’ve developed
+            a strong command of modern tools and technologies, including:
+            
+        <ul>
+          <li>
+            <strong>Core Technologies:</strong> HTML5, CSS3, JavaScript (ES6+)
+          </li>
+     
+          <li>
+            <strong>JavaScript Libraries & Frameworks:</strong> React, Next.js,Redux, Context API.js
+          </li>
+          <li>
+            <strong>Styling Tools:</strong> SASS/SCSS, Tailwind CSS, Styled Components, CSS Modules
+          </li>
+          <li>
+            <strong>Version Control:</strong> Git, GitHub
+          </li>
+          <li>
+            <strong>UI/UX Principles:</strong> Responsive Design, Mobile-First Approach
+          </li>
+          <li>
+            <strong>Testing:</strong> Jest, React Testing Library
+          </li>
+          <li>
+            <strong>Performance Optimization:</strong> Web Vitals, Lighthouse
+          </li>
+          <li>
+            <strong>Additional Tools:</strong> TypeScript, RESTful APIs
+          </li>
+          <li>
+            <strong>Deployment:</strong> Netlify, Vercel
+          </li>
+       
+        </ul>
         </motion.p>
-        <motion.a
-          variants={slideInFromLeft(1)}
-          className="py-3 px-6 bg-gradient-to-r from-indigo-500 to-purple-600 text-center text-white font-medium rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300 max-w-[200px]"
-        >
-          Learn More!
-        </motion.a>
+   
       </div>
 
       <motion.div
@@ -68,6 +86,8 @@ const HeroContent:React.FC = () => {
         />
       </motion.div>
     </motion.div>
+    </div>
+
   );
 };
 
