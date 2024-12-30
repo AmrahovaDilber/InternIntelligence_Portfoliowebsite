@@ -47,3 +47,63 @@ export const connectionData: connectionType[] = [
     href: "https://github.com/AmrahovaDilber",
   },
 ];
+
+
+export const educationData = [
+  {
+    date: "05/2023 – 12/2023",
+    title: "Front-end Development",
+    text: "IT HUB Azerbaijan | EPAM UpSkill",
+  },
+  {
+    date: "09/2022 – 05/2026",
+    title: "Information Technology",
+    text: "Azerbaijan State University of Economics - Bachelor",
+  },
+  {
+    date: "02/2024 – 08/2024",
+    title: "Front-end Development",
+    text: "ATL Academy",
+  },
+
+];
+
+export const experienceData = [
+  {
+    date: "07/2024 – Present",
+    info: {
+      company: "Digigo Group",
+      job: "Front-end Developer | Freelance",
+      description:
+        "Developed a responsive e-commerce platform using React, integrating APIs for product data, shopping cart, and secure checkout. Utilized React hooks for state management and Tailwind CSS for mobile optimization.Implemented form validation and user authentication for enhanced security",
+    },
+  },
+  {
+    date: "12/2024 – 1/2025",
+    info: {
+      company: "Intern Intelligence",
+      job: "Front-end Developer | Intern",
+      description:
+        "Collaborated with a team at 4SIM Azerbaijan as a front-end developer,contributing to the design and implementation of user interfaces for web applications, ensuring responsiveness and optimal user experience.",
+    },
+  },
+  {
+    date: "06/2024 – Present",
+    info: {
+      company: "Tripsee",
+      job: "Front-end Developer",
+      description:
+        "Responsible for building and optimizing user interfaces, developing responsive layouts, and enhancing user experience using technologies like Next.js, Tailwind CSS, TypeScript, Redux, and Git. Additionally worked with REST APIs, server-side rendering.",
+    },
+  },
+  {
+    date: "11/2023 – 12/2023",
+    info: {
+      company: "4SİM / C4IR Azerbaijan",
+      job: "Front-end Developer | Intern",
+      description:
+        "Collaborated with a team at 4SIM Azerbaijan as a front-end developer,contributing to the design and implementation of user interfaces for web applications, ensuring responsiveness and optimal user experience.",
+    },
+  },
+
+];

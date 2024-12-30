@@ -32,7 +32,7 @@ const Skills = () => {
             className="flex flex-col items-center p-4 rounded-lg group transition-transform ease-in-out duration-300"
           >
             <div
-              className="w-[170px] h-[170px] bg-[rgb(11,11,28)] flex flex-col items-center justify-center rounded-[25px] border-2 border-transparent group-hover:border-[#6f42c1] transform transition-all duration-500"
+              className="w-[170px] h-[170px] bg-[rgb(23,11,42)] flex flex-col items-center justify-center rounded-[25px] border-2 border-transparent group-hover:border-[#6f42c1] transform transition-all duration-500"
             >
               <motion.img
                 src={tech.src}

@@ -1,59 +1,87 @@
 "use client";
 import { motion } from "framer-motion";
+import {
+  slideInFromLeft,
+  slideInFromRight,
+  slideInFromTop,
+} from "../utils/motion";
+import { SparklesIcon } from "@heroicons/react/24/solid";
+import Title from "./Title";
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
   return (
-    <div className="flex items-center justify-between  max-w-[1280px] w-full  px-6 sm:px-0">
+    <div className="lg:px-0 px-8 py-8">
+      <Title>About me</Title>
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="flex flex-col md:flex-row items-center gap-10 max-w-[1280px] w-full mx-auto"
+        initial="hidden"
+        animate="visible"
+        className="flex flex-col md:flex-row w-full z-[20] gap-8"
       >
-        <div className="flex flex-col gap-6 items-center md:items-start text-center md:text-left">
+        <div className="h-full w-full flex flex-col gap-5 justify-center text-start">
           <motion.div
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-white text-5xl font-extrabold tracking-tight"
+            variants={slideInFromTop}
+            className="Welcome-box py-[8px] px-[7px] border w-full sm:w-[250px] border-[#7042f88b] opacity-[0.9] flex items-center gap-2 bg-gradient-to-r from-purple-600 to-purple-900 rounded-lg shadow-lg"
           >
-            Dilber Amrahova
+            <SparklesIcon className="text-[#ffcc00] h-6 w-6" />
+            <h1 className="Welcome-text text-[14px] sm:text-[16px] text-white font-semibold">
+              Frontend Developer
+            </h1>
           </motion.div>
 
           <motion.p
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-gray-300 text-lg"
+            variants={slideInFromLeft(0.8)}
+            className="text-lg text-gray-400 my-5 max-w-[600px] sm:max-w-none"
           >
-            Passionate Front-End Developer crafting modern and user-friendly web
-            experiences.
+            My name is Dilbər Əmrahova, and I am a front-end developer with a
+            passion for creating engaging, user-friendly digital experiences.
+            Currently, I am pursuing a degree in Information Technology at the
+            University of Economics. Throughout my learning journey, I’ve
+            developed a strong command of modern tools and technologies,
+            including:
+            <ul className="list-disc ml-5 mt-3">
+              <li>
+                <strong>Core Technologies:</strong> HTML5, CSS3, JavaScript (ES6+)
+              </li>
+              <li>
+                <strong>JavaScript Libraries & Frameworks:</strong> React, Next.js,
+                Redux, Context API.js
+              </li>
+              <li>
+                <strong>Styling Tools:</strong> SASS/SCSS, Tailwind CSS, Styled
+                Components, CSS Modules
+              </li>
+              <li>
+                <strong>Version Control:</strong> Git, GitHub
+              </li>
+              <li>
+                <strong>UI/UX Principles:</strong> Responsive Design, Mobile-First
+                Approach
+              </li>
+              <li>
+                <strong>Testing:</strong> Jest, React Testing Library
+              </li>
+              <li>
+                <strong>Performance Optimization:</strong> Web Vitals, Lighthouse
+              </li>
+              <li>
+                <strong>Additional Tools:</strong> TypeScript, RESTful APIs
+              </li>
+              <li>
+                <strong>Deployment:</strong> Netlify, Vercel
+              </li>
+            </ul>
           </motion.p>
-
-          <motion.a
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            href="#"
-            className="py-3 px-8 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300"
-          >
-            Download CV
-          </motion.a>
         </div>
 
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="relative w-[300px] h-[300px] md:w-[500px] md:h-[500px] "
+          variants={slideInFromRight(0.8)}
+          className="w-full h-full flex justify-center items-center"
         >
           <img
-            src="/myphoto.jpg"
-            alt="Dilber Amrahova"
-            className="rounded-full w-full h-full shadow-2xl object-cover border-[12px] border-double bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 p-1 hover:shadow-indigo-500/80 transition-all duration-300"
+            src="/mainIconsdark.svg"
+            alt="work icons"
+            className="w-[450px] lg:w-[600px]"
           />
-          <div className="absolute -top-6 -right-6 w-[60px] h-[60px] bg-gradient-to-r from-purple-600 to-indigo-500 rounded-full shadow-md"></div>
-          <div className="absolute -bottom-6 -left-6 w-[60px] h-[60px] bg-gradient-to-r from-purple-600 to-indigo-500 rounded-full shadow-md"></div>
         </motion.div>
       </motion.div>
     </div>

@@ -1,8 +1,10 @@
 import React from "react";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
-import AboutMe from "../components/AboutMe";
-import HeroContent from "../components/HeroContent";
+import AboutMe from "../components/HeroSection";
+import HeroContent from "../components/AboutMe";
+import Education from "../components/Education";
+import Experience from "../components/Experience";
 
 const Home: React.FC = () => {
   return (
@@ -21,17 +23,22 @@ const Home: React.FC = () => {
       }}
     >
       <div className="relative z-20 w-full max-w-[1280px]  mx-auto  flex flex-col ">
-      <section className="w-full py-10 ">
+      <section className="w-full py-8 ">
           <AboutMe></AboutMe>
         </section>
-        <section className="w-full py-10 ">
+        <section className="w-full py-8 ">
           <Skills />
         </section>
-        <section className="w-full py-10 ">
+        <section className="w-full py-8 ">
          <HeroContent></HeroContent>
         </section>
-   
-        <section className="w-full py-10 ">
+        <section className="w-full py-8 ">
+        <Education></Education>
+        </section>
+        <section className="w-full py-8 ">
+        <Experience></Experience>
+        </section>
+        <section className="w-full py-8 ">
           <Contact></Contact>
         </section>
  

@@ -10,11 +10,10 @@ export type validationType = {
     email?: string,
     message?:string
 }
-
 export type connectionType = {
-    id: number,
-    name: string,
-    infor: string,
-    icon: React.JSX,
-    href:string
-}
+    id: number;
+    name: string;
+    infor: string;
+    icon: JSX.Element;
+    href: string;
+};
