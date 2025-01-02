@@ -6,6 +6,7 @@ import HeroContent from "../components/AboutMe";
 import Education from "../components/Education";
 import Experience from "../components/Experience";
 import Projects from "../components/Projects";
+import Header from "../components/Header";
 
 const Home: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const Home: React.FC = () => {
       }}
     >
       <div className="relative z-20 w-full max-w-[1280px]  mx-auto  flex flex-col ">
+        <Header></Header>
       <section className="w-full py-8 ">
           <AboutMe></AboutMe>
         </section>

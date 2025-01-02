@@ -6,7 +6,7 @@ import { SiLinkedin } from "react-icons/si";
 
 const HeroSection = () => {
   return (
-    <div className="flex items-center justify-between  max-w-[1280px] w-full  px-6 lg:px-0">
+    <div id='home' className="flex items-center justify-between mt-24 max-w-[1280px] w-full  px-6 lg:px-0">
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}

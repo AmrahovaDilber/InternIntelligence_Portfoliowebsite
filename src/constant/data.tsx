@@ -1,4 +1,4 @@
-import { connectionType, techType } from "../type/types";
+import { connectionType, NavlinkProps, techType } from "../type/types";
 import { FaPhoneVolume } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { SiLinkedin } from "react-icons/si";
@@ -48,7 +48,6 @@ export const connectionData: connectionType[] = [
   },
 ];
 
-
 export const educationData = [
   {
     date: "05/2023 – 12/2023",
@@ -65,7 +64,6 @@ export const educationData = [
     title: "Front-end Development",
     text: "ATL Academy",
   },
-
 ];
 
 export const experienceData = [
@@ -105,10 +103,7 @@ export const experienceData = [
         "Collaborated with a team at 4SIM Azerbaijan as a front-end developer,contributing to the design and implementation of user interfaces for web applications, ensuring responsiveness and optimal user experience.",
     },
   },
-
 ];
-
-
 
 export const projectsData = [
   {
@@ -116,7 +111,7 @@ export const projectsData = [
     title: "HerseyBurada",
     category: "e-commerce",
     des: "HerseyBurada is a modern e-commerce platform that offers a seamless shopping experience. Users can browse products, add them to a cart, and proceed to checkout effortlessly.",
-    image: '/herseyburada.png',
+    image: "/herseyburada.png",
     icons: ["/react.webp", "/tailwindd.svg"],
     link: "https://herseyburada.netlify.app/",
   },
@@ -136,7 +131,14 @@ export const projectsData = [
     image: "/portfolio.png",
     icons: ["/react.webp", "/scss.png"],
     des: "A personal portfolio showcasing my projects, skills, and experience.It highlights key accomplishments, coding expertise, and includes a contact section for professional connections.",
-  }
-  
- 
+  },
+];
+
+
+export const navLinks:NavlinkProps[] = [
+  { href: "#home", title: "Home" },
+  { href: "#skills", title: "Skills" },
+  { href: "#about", title: "About" },
+  { href: "#projects", title: "Projects" },
+  { href: "#contact", title: "Contact" },
 ];

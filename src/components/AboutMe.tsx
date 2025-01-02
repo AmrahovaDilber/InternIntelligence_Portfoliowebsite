@@ -10,7 +10,7 @@ import Title from "./Title";
 
 const AboutMe: React.FC = () => {
   return (
-    <div className="lg:px-0 px-8 py-8">
+    <div id='about' className="lg:px-0 px-8 py-8">
       <Title>About me</Title>
       <motion.div
         initial="hidden"

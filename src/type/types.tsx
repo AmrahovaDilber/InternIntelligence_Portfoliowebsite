@@ -17,3 +17,10 @@ export type connectionType = {
     icon: JSX.Element;
     href: string;
 };
+
+
+ export type NavlinkProps={
+    href: string,
+    title:string
+}
+
