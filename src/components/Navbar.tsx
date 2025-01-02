@@ -3,8 +3,6 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import NavLink from "./Navlink";
 import { navLinks } from "../constant/data";
 
-
-
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

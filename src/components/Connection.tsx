@@ -1,9 +1,6 @@
-
 import { connectionData } from "../constant/data";
 
-
-
-const Connection:React.FC=()=> {
+const Connection: React.FC = () => {
   return (
     <div className="w-full max-w-[100%] sm:max-w-[50%]  flex flex-col justify-center  px-4 sm:px-0">
       {connectionData.map((item) => (
@@ -24,12 +21,11 @@ const Connection:React.FC=()=> {
             >
               {item.infor}
             </a>
-
           </div>
         </div>
       ))}
     </div>
   );
-}
+};
 
 export default Connection;

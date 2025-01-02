@@ -1,4 +1,4 @@
-function Logo() {
+const Logo:React.FC=()=> {
     return (
       <div className="flex items-center space-x-4 sm:space-x-6">
         <a href="/" className="hover:scale-105 transition-transform">
