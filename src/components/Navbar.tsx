@@ -5,6 +5,7 @@ import { navLinks } from "../constant/data";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const[activeLink,setActiveLink]=useState("Home")
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -24,15 +25,25 @@ function Navbar() {
 
       <ul className="hidden md:flex space-x-6 lg:space-x-10">
         {navLinks.map((link) => (
-          <li
-            key={link.href}
-            className="text-gray-300 font-semibold text-md lg:text-lg hover:text-indigo-300 transition-colors"
-          >
-            <NavLink href={link.href} title={link.title} />
-          </li>
+         <li
+         key={link.href}
+         className={`text-md lg:text-lg font-semibold transition-all duration-300 ease-in-out ${
+           activeLink === link.href
+             ? "text-white border-b-2 border-indigo-300 bg-gradient-to-r from-indigo-600 to-purple-500 rounded-md px-2 py-1"
+             : "text-gray-300 hover:text-indigo-400 hover:bg-indigo-100 hover:rounded-md px-2 py-1"
+         }`}
+       >
+         <a
+           href={link.href}
+           onClick={() => setActiveLink(link.href)}
+           className="scroll-smooth"
+         >
+           {link.title}
+         </a>
+       </li>
+       
         ))}
       </ul>
-
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-gradient-to-br from-indigo-800 via-gray-900 to-indigo-900 z-40 flex flex-col items-center justify-center">
           <ul className="space-y-8 text-center">

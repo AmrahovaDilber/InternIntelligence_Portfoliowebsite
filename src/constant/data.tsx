@@ -139,6 +139,8 @@ export const navLinks:NavlinkProps[] = [
   { href: "#home", title: "Home" },
   { href: "#skills", title: "Skills" },
   { href: "#about", title: "About" },
+  { href: "#education", title: "Education" },
+  { href: "#experience", title: "Experience" },
   { href: "#projects", title: "Projects" },
   { href: "#contact", title: "Contact" },
 ];

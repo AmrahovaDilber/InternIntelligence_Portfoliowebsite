@@ -4,7 +4,6 @@ import "react-vertical-timeline-component/style.min.css";
 import { experienceData } from "../constant/data";
 import Title from "./Title";
 
-// Define the type for experience data
 interface ExperienceData {
   date: string;
   info: {
@@ -26,10 +25,19 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
       contentStyle={{
         background: "rgb(23,11,42)",
         color: "#fff",
+        borderRadius: "12px",
+        padding: "20px",
+        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ borderRight: "7px solid #232631" }}
       date={experience.date}
-      iconStyle={{ background: "#4a5568" }}
+      iconStyle={{
+        background: "#4a5568",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        border: "3px solid #fff",
+      }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
           <span className="text-white text-lg font-bold">
@@ -39,17 +47,19 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
       }
     >
       <div>
-        <h3 className="text-white text-2xl font-bold">{job}</h3>
-        <p className="text-secondary text-lg font-semibold m-0">{company}</p>
+        <h3 className="text-white text-2xl font-bold mb-2">{job}</h3>
+        <p className="text-secondary text-lg font-semibold mb-4">{company}</p>
       </div>
-      <p className="mt-5 text-gray-300 text-sm tracking-wide">{description}</p>
+      <p className="text-gray-300 text-sm tracking-wide leading-relaxed">
+        {description}
+      </p>
     </VerticalTimelineElement>
   );
 };
 
 const Experience = () => {
   return (
-    <>
+    <div id='experience'>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 20 },
@@ -58,6 +68,7 @@ const Experience = () => {
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.8 }}
+        className="mb-8"
       >
         <Title>Work Experience</Title>
       </motion.div>
@@ -69,7 +80,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </div>
   );
 };
 
