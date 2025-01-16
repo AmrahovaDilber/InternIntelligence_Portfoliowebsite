@@ -20,7 +20,7 @@ const Skills = () => {
   return (
     <div id="skills" className="mx-auto max-w-[1280px] mt-20 px-6 sm:px-0">
       <Title>Skills</Title>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-12 sm:gap-6">
         {techs.map((tech, index) => (
           <motion.div
             key={index}
