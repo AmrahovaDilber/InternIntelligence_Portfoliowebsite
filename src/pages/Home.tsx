@@ -9,6 +9,7 @@ import Projects from "../components/Projects";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MagicCursor from "../components/MagicCursor";
+import BackToTop from "../components/BackToTop";
 
 const Home: React.FC = () => {
   return (
@@ -55,6 +56,7 @@ const Home: React.FC = () => {
         <section className="w-full">
           <Footer />
         </section>
+        <BackToTop></BackToTop>
       </div>
     </main>
   );
