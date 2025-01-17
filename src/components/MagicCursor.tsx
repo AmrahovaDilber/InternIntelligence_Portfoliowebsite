@@ -188,57 +188,56 @@ const MagicCursor: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="hidden sm:block">
+    <div
+      ref={cursorRef}
+      className="fixed top-0 left-0 pointer-events-none z-50 mix-blend-difference"
+      style={{
+        transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
+        transition: "transform 0.1s ease-out",
+      }}
+    >
       <div
-        ref={cursorRef}
-        className="fixed top-0 left-0 pointer-events-none z-50 mix-blend-difference"
+        className={`relative transition-transform duration-300 ${
+          isClicking ? "scale-75" : "scale-100"
+        }`}
+      >
+        {[...Array(3)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute border-2 border-white rounded-full opacity-60"
+            style={{
+              width: `${32 + i * 16}px`,
+              height: `${32 + i * 16}px`,
+              left: `-${24 + i * 6}px`,
+              top: `-${24 + i * 6}px`,
+              animation: `spin-slow ${3 + i}s linear infinite ${
+                i % 2 ? "reverse" : ""
+              }`,
+            }}
+          />
+        ))}
+
+        <div className="absolute -left-2 -top-2 w-4 h-4 bg-white rounded-full animate-pulse" />
+      </div>
+    </div>
+
+    {particles.map((particle) => (
+      <div
+        key={particle.id}
+        className="fixed top-0 left-0 pointer-events-none"
         style={{
-          transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
-          transition: "transform 0.1s ease-out",
+          transform: `translate3d(${particle.x}px, ${particle.y}px, 0)`,
+          color: particle.color,
+          backgroundColor: particle.color,
+          opacity: particle.lifetime,
+          boxShadow: `0 0 ${particle.size * 2}px ${particle.color}`,
+          filter: "brightness(1.5)",
         }}
       >
-        <div
-          className={`relative transition-transform duration-300 ${
-            isClicking ? "scale-75" : "scale-100"
-          }`}
-        >
-          {[...Array(3)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute border-2 border-white rounded-full opacity-60"
-              style={{
-                width: `${32 + i * 16}px`,
-                height: `${32 + i * 16}px`,
-                left: `-${24 + i * 6}px`,
-                top: `-${24 + i * 6}px`,
-                animation: `spin-slow ${3 + i}s linear infinite ${
-                  i % 2 ? "reverse" : ""
-                }`,
-              }}
-            />
-          ))}
-
-          <div className="absolute -left-2 -top-2 w-4 h-4 bg-white rounded-full animate-pulse" />
-        </div>
+        {renderParticleShape(particle)}
       </div>
-
-      {particles.map((particle) => (
-        <div
-          key={particle.id}
-          className="fixed top-0 left-0 pointer-events-none"
-          style={{
-            transform: `translate3d(${particle.x}px, ${particle.y}px, 0)`,
-            color: particle.color,
-            backgroundColor: particle.color,
-            opacity: particle.lifetime,
-            boxShadow: `0 0 ${particle.size * 2}px ${particle.color}`,
-            filter: "brightness(1.5)",
-          }}
-        >
-          {renderParticleShape(particle)}
-        </div>
-      ))}
-
+    ))}
       {/* Magical trail */}
       {colors.map((color, i) => (
         <div
@@ -302,7 +301,7 @@ const MagicCursor: React.FC = () => {
           animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
       `}</style>
-    </>
+    </div>
   );
 };
 
