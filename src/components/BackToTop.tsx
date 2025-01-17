@@ -25,16 +25,16 @@ const BackToTop = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-10 right-10">
+    <div className="fixed bottom-5 right-5 z-20">
       {isShown && (
          <button
          onClick={backToTop}
-         className="w-12 h-12 rounded-full bg-gradient-to-r text-white shadow-lg from-purple-500 via-blue-500 to-indigo-500 transition duration-300 flex items-center justify-center transform hover:scale-110"
+         className="h-10 w-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r text-white shadow-lg from-purple-500 via-blue-500 to-indigo-500 transition duration-300 flex items-center justify-center transform hover:scale-110"
          style={{
            boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)",
          }}
        >
-         <FaArrowUp className="text-xl" />
+         <FaArrowUp className="text-lg sm:text-xl" />
        </button>
       )}
     </div>

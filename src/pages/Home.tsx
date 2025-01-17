@@ -5,11 +5,11 @@ import AboutMe from "../components/HeroSection";
 import HeroContent from "../components/AboutMe";
 import Education from "../components/Education";
 import Experience from "../components/Experience";
-import Projects from "../components/Projects";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MagicCursor from "../components/MagicCursor";
 import BackToTop from "../components/BackToTop";
+import { Projects } from "../components/Projects";
 
 const Home: React.FC = () => {
   return (
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
           <Experience />
         </section>
         <section className="w-full py-8">
-          <Projects />
+      <Projects></Projects>
         </section>
         <section className="w-full py-8">
           <Contact />

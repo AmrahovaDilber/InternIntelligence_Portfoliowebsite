@@ -24,3 +24,11 @@ export type connectionType = {
     title:string
 }
 
+export type ProjectType = {
+    link: string;
+    image: string;
+    title: string;
+    des: string;
+    icons: string[]; 
+  };
+  

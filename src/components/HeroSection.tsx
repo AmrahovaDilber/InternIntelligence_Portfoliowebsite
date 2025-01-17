@@ -17,7 +17,7 @@ const HeroSection = () => {
         transition={{ duration: 0.8, ease: "easeInOut" }}
         className="flex flex-col lg:flex-row items-center gap-10 max-w-[1280px] w-full mx-auto"
       >
-        <div className="flex flex-col gap-6 items-center lg:items-start text-center lg:text-left lg:max-w-[52%]">
+        <div className="flex flex-col gap-6 items-center lg:items-start text-center lg:text-left lg:max-w-[54%]">
           <motion.div
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
