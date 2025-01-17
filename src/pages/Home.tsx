@@ -8,11 +8,12 @@ import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import MagicCursor from "../components/MagicCursor";
 
 const Home: React.FC = () => {
   return (
     <main
-      className="relative w-full min-h-screen flex flex-col  bg-black text-white overflow-x-hidden"
+      className="relative w-full min-h-screen flex flex-col bg-black text-white overflow-x-hidden"
       style={{
         backgroundImage: `
           radial-gradient(circle at 20% 50%, rgba(72, 61, 139, 0.8), transparent),
@@ -25,32 +26,34 @@ const Home: React.FC = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="relative z-20   flex flex-col ">
-        <Header></Header>
-        <section className="w-full py-8 ">
-          <AboutMe></AboutMe>
+      {/* Magic Cursor */}
+      <MagicCursor />
+
+      <div className="relative z-20 flex flex-col">
+        <Header />
+        <section className="w-full py-8">
+          <AboutMe />
         </section>
-        <section className="w-full py-8 ">
+        <section className="w-full py-8">
           <Skills />
         </section>
-        <section className="w-full py-8 ">
-          <HeroContent></HeroContent>
+        <section className="w-full py-8">
+          <HeroContent />
         </section>
-        <section className="w-full py-8 ">
-          <Education></Education>
+        <section className="w-full py-8">
+          <Education />
         </section>
-        <section className="w-full py-8 ">
-          <Experience></Experience>
+        <section className="w-full py-8">
+          <Experience />
         </section>
-        <section className="w-full py-8 ">
-          <Projects></Projects>
+        <section className="w-full py-8">
+          <Projects />
         </section>
-        <section className="w-full py-8 ">
-          <Contact></Contact>
+        <section className="w-full py-8">
+          <Contact />
         </section>
-
-        <section className="w-full  ">
-          <Footer></Footer>
+        <section className="w-full">
+          <Footer />
         </section>
       </div>
     </main>
