@@ -13,7 +13,7 @@ function Navbar() {
     <nav className="relative">
       <button
         onClick={toggleMenu}
-        className="md:hidden absolute top-0 right-0 z-50 text-gray-300"
+        className="md:hidden absolute top-[-10px] right-0 z-50 text-gray-300"
         aria-label="Toggle Menu"
       >
         {isMenuOpen ? (
