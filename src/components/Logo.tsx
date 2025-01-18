@@ -5,7 +5,7 @@ const Logo:React.FC=()=> {
           <img
             src="/log.png"
             alt="logo"
-            className="w-12 sm:w-16"
+            className="w-10 sm:w-16"
           />
         </a>
         <a href="mailto:dilberamrahova1@gmail.com">
