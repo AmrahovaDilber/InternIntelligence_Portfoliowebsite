@@ -27,9 +27,8 @@ const Home: React.FC = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Magic Cursor */}
+     
       <MagicCursor />
-
       <div className="relative z-20 flex flex-col">
         <Header />
         <section className="w-full py-8">

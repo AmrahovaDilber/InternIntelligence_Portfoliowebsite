@@ -5,7 +5,8 @@ import { MdOutlineEmail } from "react-icons/md";
 import { SiLinkedin } from "react-icons/si";
 import DownloadCv from "./DownloadCv";
 
-const HeroSection = () => {
+
+const HeroSection:React.FC = () => {
   return (
     <div
       id="home"
@@ -89,11 +90,11 @@ const HeroSection = () => {
           <img
             src="/myphoto.jpg"
             alt="Dilber Amrahova"
-            className="rounded-full w-full h-full shadow-2xl object-cover border-[12px] border-double bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 p-1 hover:shadow-indigo-500/80 transition-all duration-300"
+            className="rounded-full w-full h-full shadow-2xl object-cover border-[12px] border-double bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 p-1 shadow-indigo-500/80 transition-all duration-300"
           />
           {/* Decorative Elements */}
-          <div className="absolute -top-6 -right-6 w-[60px] h-[60px] bg-gradient-to-r from-purple-600 to-indigo-500 rounded-full shadow-md animate-pulse"></div>
-          <div className="absolute -bottom-6 -left-6 w-[60px] h-[60px] bg-gradient-to-r from-purple-600 to-indigo-500 rounded-full shadow-md animate-pulse"></div>
+          <div className="absolute -top-6 -right-6 w-[60px] h-[60px] bg-gradient-to-r from-purple-600 to-indigo-500 rounded-full shadow-md "></div>
+          <div className="absolute -bottom-6 -left-6 w-[60px] h-[60px] bg-gradient-to-r from-purple-600 to-indigo-500 rounded-full shadow-md "></div>
           <div className="absolute top-8 right-8 w-[40px] h-[40px] bg-white rounded-full opacity-20"></div>
           <div className="absolute bottom-10 left-10 w-[30px] h-[30px] bg-purple-500 rounded-full opacity-40 animate-bounce"></div>
         </motion.div>

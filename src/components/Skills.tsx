@@ -1,40 +1,37 @@
+import { motion } from "framer-motion";
 import { techs } from "../constant/data";
 import Title from "./Title";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
-const Skills = () => {
-  const [hasScrolled, setHasScrolled] = useState(false);
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } }
+};
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setHasScrolled(true);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+const Skills: React.FC = () => {
   return (
     <div id="skills" className="mx-auto max-w-[1280px] mt-20 px-6 sm:px-0">
       <Title>Skills</Title>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-12 sm:gap-6">
+      
+      <motion.div
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-12 sm:gap-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+        }}
+      >
         {techs.map((tech, index) => (
           <motion.div
             key={index}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, y: 50 }}
-            animate={hasScrolled ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ delay: index * 0.1, duration: 0.5 }}
             className="flex flex-col items-center p-4 rounded-lg group transition-transform ease-in-out duration-300"
+            variants={fadeInUp}
           >
             <div
               className="w-[170px] h-[170px] bg-[rgb(23,11,42)] flex flex-col items-center justify-center rounded-[25px] border-2 border-transparent group-hover:border-[#6f42c1] transform transition-all duration-500"
             >
-              <motion.img
+              <img
                 src={tech.src}
                 width={90}
                 height={90}
@@ -47,7 +44,7 @@ const Skills = () => {
             </p>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

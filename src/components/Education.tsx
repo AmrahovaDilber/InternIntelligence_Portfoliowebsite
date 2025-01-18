@@ -36,7 +36,7 @@ const Education: React.FC = () => {
                 index % 2 === 0 ? "text-right pr-4 sm:pr-8" : "text-left pl-4 sm:pl-8"
               }`}
             >
-              <div className="inline-block bg-white text-gray-800 text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+              <div className="inline-block bg-white text-gray-800 text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-lg shadow-md ">
                 {event.date}
               </div>
             </div>
