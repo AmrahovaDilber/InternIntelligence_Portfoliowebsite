@@ -23,7 +23,7 @@ function Navbar() {
         )}
       </button>
 
-      <ul className="hidden md:flex space-x-6 lg:space-x-10">
+      <ul className="hidden md:flex space-x-6 lg:space-x-8">
         {navLinks.map((link) => (
          <li
          key={link.href}

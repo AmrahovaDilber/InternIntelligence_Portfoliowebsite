@@ -2,7 +2,7 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import { experienceData } from "../constant/data";
-import Title from "./Title";
+import { SparklesPreview } from "./SparklesPreview";
 
 interface ExperienceData {
   date: string;
@@ -70,7 +70,7 @@ const Experience = () => {
         transition={{ duration: 0.8 }}
         className="mb-8"
       >
-        <Title>Work Experience</Title>
+        <SparklesPreview>Work Experience</SparklesPreview>
       </motion.div>
 
       <div className="flex flex-col">

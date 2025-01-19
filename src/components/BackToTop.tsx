@@ -25,7 +25,7 @@ const BackToTop = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-5 right-5 z-20">
+    <div className="fixed bottom-6 right-8 sm:bottom-8 sm:right-10 z-20">
       {isShown && (
          <button
          onClick={backToTop}

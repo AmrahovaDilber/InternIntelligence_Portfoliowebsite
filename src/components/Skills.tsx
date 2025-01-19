@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { techs } from "../constant/data";
-import Title from "./Title";
+import { SparklesPreview } from "./SparklesPreview";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -10,10 +10,10 @@ const fadeInUp = {
 const Skills: React.FC = () => {
   return (
     <div id="skills" className="mx-auto max-w-[1280px] mt-20 px-6 sm:px-0">
-      <Title>Skills</Title>
+      <SparklesPreview>Skills</SparklesPreview>
       
       <motion.div
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-12 sm:gap-6"
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-12 sm:gap-6 mt-6 sm:mt-14"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}

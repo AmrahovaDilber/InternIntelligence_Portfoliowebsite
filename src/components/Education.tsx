@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Title from "./Title";
 import { educationData } from "../constant/data";
+import { SparklesPreview } from "./SparklesPreview";
 
 const Education: React.FC = () => {
   return (
@@ -12,10 +12,10 @@ const Education: React.FC = () => {
         transition={{ duration: 0.8 }}
         className="mb-8"
       >
-        <Title>Education</Title>
+        <SparklesPreview>Education</SparklesPreview>
       </motion.div>
 
-      <div id="education" className="relative">
+      <div id="education" className="relative mt-6 sm:mt-14">
         {/* Timeline Line */}
         <div className="absolute left-1/2 top-0 w-1 h-full bg-gray-300 transform -translate-x-1/2"></div>
 

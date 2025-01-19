@@ -6,16 +6,16 @@ import {
   slideInFromTop,
 } from "../utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
-import Title from "./Title";
+import { SparklesPreview } from "./SparklesPreview";
 
 const AboutMe: React.FC = () => {
   return (
-    <div id='about' className="lg:px-0 px-8 py-8 max-w-7xl mx-auto w-full">
-      <Title>About me</Title>
+    <div id="about" className="lg:px-0 px-8 py-8 max-w-7xl mx-auto w-full">
+      <SparklesPreview>About me</SparklesPreview>
       <motion.div
         initial="hidden"
         animate="visible"
-        className="flex flex-col md:flex-row w-full z-[20] gap-8"
+        className="flex flex-col md:flex-row w-full z-[20] gap-8 mt-14"
       >
         <div className="h-full w-full flex flex-col gap-5 justify-center text-start">
           <motion.div
@@ -40,11 +40,12 @@ const AboutMe: React.FC = () => {
             including:
             <ul className="list-disc ml-5 mt-3">
               <li>
-                <strong>Core Technologies:</strong> HTML5, CSS3, JavaScript (ES6+)
+                <strong>Core Technologies:</strong> HTML5, CSS3, JavaScript
+                (ES6+)
               </li>
               <li>
-                <strong>JavaScript Libraries & Frameworks:</strong> React, Next.js,
-                Redux, Context API.js
+                <strong>JavaScript Libraries & Frameworks:</strong> React,
+                Next.js, Redux, Context API.js
               </li>
               <li>
                 <strong>Styling Tools:</strong> SASS/SCSS, Tailwind CSS, Styled
@@ -54,14 +55,15 @@ const AboutMe: React.FC = () => {
                 <strong>Version Control:</strong> Git, GitHub
               </li>
               <li>
-                <strong>UI/UX Principles:</strong> Responsive Design, Mobile-First
-                Approach
+                <strong>UI/UX Principles:</strong> Responsive Design,
+                Mobile-First Approach
               </li>
               <li>
                 <strong>Testing:</strong> Jest, React Testing Library
               </li>
               <li>
-                <strong>Performance Optimization:</strong> Web Vitals, Lighthouse
+                <strong>Performance Optimization:</strong> Web Vitals,
+                Lighthouse
               </li>
               <li>
                 <strong>Additional Tools:</strong> TypeScript, RESTful APIs
