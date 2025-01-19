@@ -10,6 +10,7 @@ import MagicCursor from "../components/MagicCursor";
 import BackToTop from "../components/BackToTop";
 import { Projects } from "../components/Projects";
 import { TimelineDemo } from "../components/TimeLineDemo";
+import ProgressBar from "../components/ProgressBar";
 
 const Home: React.FC = () => {
   return (
@@ -27,7 +28,7 @@ const Home: React.FC = () => {
         backgroundAttachment: "fixed",
       }}
     >
-     
+     <ProgressBar></ProgressBar>
       <MagicCursor />
       <div className="relative z-20 flex flex-col">
         <Header />
