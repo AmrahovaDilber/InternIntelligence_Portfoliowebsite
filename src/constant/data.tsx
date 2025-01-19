@@ -82,7 +82,7 @@ export const experienceData = [
       company: "Intern Intelligence",
       job: "Front-end Developer | Intern",
       description:
-        "Collaborated with a team at 4SIM Azerbaijan as a front-end developer,contributing to the design and implementation of user interfaces for web applications, ensuring responsiveness and optimal user experience.",
+        "Developed diverse projects using TypeScript, Firebase, and Tailwind CSS to enhance our skills with various technologies. These included a portfolio website to showcase our work and a movie app to explore interactive designs, leveraging the power of React and Next.js. Each project provided valuable hands-on experience and real-world development insights, focusing on building scalable and responsive applications.",
     },
   },
   {

@@ -8,9 +8,9 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MagicCursor from "../components/MagicCursor";
 import BackToTop from "../components/BackToTop";
-import { Projects } from "../components/Projects";
 import { TimelineDemo } from "../components/TimeLineDemo";
 import ProgressBar from "../components/ProgressBar";
+import { AnimatedTestimonialsDemo } from "../components/AnimatedProjectsDemo";
 
 const Home: React.FC = () => {
   return (
@@ -35,6 +35,7 @@ const Home: React.FC = () => {
         <section className="w-full py-8">
           <AboutMe />
         </section>
+      
         <section className="w-full py-8">
           <Skills />
         </section>
@@ -48,7 +49,7 @@ const Home: React.FC = () => {
           <TimelineDemo></TimelineDemo>
         </section>
         <section className="w-full py-8">
-          <Projects></Projects>
+        <AnimatedTestimonialsDemo></AnimatedTestimonialsDemo>
         </section>
         <section className="w-full py-8">
           <Contact />
