@@ -57,14 +57,15 @@ const ContactForm: React.FC = () => {
       [e.target.name]: e.target.value,
     }));
   }
- 
+
   return (
     <form
       className="max-w-[100%] sm:max-w-[50%] shadow-lg  space-y-6  bg-[rgb(23,11,42)] rounded-xl w-full  p-6"
       onSubmit={handleSubmitForm}
     >
-      <p className="text-2xl font-semibold text-white mb-8 text-center">
-        Let's work together!
+      <p className="text-xl sm:text-3xl font-bold text-white mb-6 sm:mb-8 text-center leading-relaxed">
+        Interested in working together? <br />
+        <span className="text-violet-400">Let’s connect!</span>
       </p>
 
       <div>
@@ -133,6 +134,5 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
-
 
 // [rgb(11,11,28)]

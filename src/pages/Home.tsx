@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
 import AboutMe from "../components/HeroSection";
@@ -13,6 +13,12 @@ import ProgressBar from "../components/ProgressBar";
 import { AnimatedTestimonialsDemo } from "../components/AnimatedProjectsDemo";
 
 const Home: React.FC = () => {
+  useEffect(() => {
+    const loader = document.getElementById("loader");
+    if (loader) {
+      loader.classList.add("hidden");
+    }
+  }, []);
   return (
     <main
       className="relative w-full min-h-screen flex flex-col bg-black text-white overflow-x-hidden"

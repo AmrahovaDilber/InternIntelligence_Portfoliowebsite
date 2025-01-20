@@ -40,7 +40,7 @@ export const AnimatedTestimonials = ({
       <SparklesPreview>Projects</SparklesPreview>
       <div className="relative grid grid-cols-1 md:grid-cols-2  gap-6 md:gap-16 mt-14">
         <div>
-          <div className="relative h-[260px]  md:h-[400px] w-full">
+          <div className="relative h-[240px]  md:h-[400px] w-full">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div

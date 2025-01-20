@@ -30,7 +30,7 @@ const AboutMe: React.FC = () => {
 
           <motion.p
             variants={slideInFromLeft(0.8)}
-            className="text-lg text-gray-400 my-5 max-w-[600px] sm:max-w-none"
+            className="text-lg text-gray-300 my-5 max-w-[600px] sm:max-w-none"
           >
             My name is Dilbər Əmrahova, and I am a front-end developer with a
             passion for creating engaging, user-friendly digital experiences.
@@ -82,7 +82,7 @@ const AboutMe: React.FC = () => {
           <img
             src="/mainIconsdark.svg"
             alt="work icons"
-            className="w-[450px] lg:w-[600px]"
+            className="w-[500px] lg:w-[600px]"
           />
         </motion.div>
       </motion.div>

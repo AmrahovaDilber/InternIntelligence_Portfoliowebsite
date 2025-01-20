@@ -31,7 +31,6 @@ const projectsData = [
 interface Testimonial {
   quote: string;
   name: string;
-  designation: string;
   src: string;
   icons: string[];
   link: string;
@@ -40,7 +39,6 @@ interface Testimonial {
 const testimonialsData: Testimonial[] = projectsData.map((project) => ({
     quote: project.des,
     name: project.title,
-    designation: project.category || "Unknown",
     src: project.image,
     link: project.link,
     icons: project.icons,

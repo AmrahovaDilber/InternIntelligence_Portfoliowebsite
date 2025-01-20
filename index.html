@@ -4,9 +4,76 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dilber's Portfolio</title>
+    <title>Dilber Amrahova's Portfolio</title>
+    <style>
+      #loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        z-index: 9999;
+      }
+
+      .spinner {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        margin-bottom: 1rem; /* Add spacing below the spinner */
+      }
+
+      .spinner div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 8px solid transparent;
+        border-top-color: #3b19c3;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      .spinner div:nth-child(2) {
+        border-top-color: #413d43;
+        animation-delay: -0.5s;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      #loader p {
+        color: #ffffff;
+        font-size: 1.6rem;
+        font-family: "Arial", sans-serif;
+        margin-bottom: 30px;
+      }
+
+      #loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+      }
+    </style>
   </head>
   <body>
+    <div id="loader">
+      <p>Dilber Amrahova's Portfolio</p>
+      <div class="spinner">
+        <div></div>
+        <div></div>
+      </div>
+    
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
