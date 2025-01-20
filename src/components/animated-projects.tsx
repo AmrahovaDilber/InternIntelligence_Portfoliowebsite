@@ -1,19 +1,18 @@
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
-import {  useState } from "react";
+import { useState } from "react";
 import { SparklesPreview } from "./SparklesPreview";
 
 type Testimonial = {
   quote: string;
   name: string;
   src: string;
-  icons: string[]; 
-  link: string; 
+  icons: string[];
+  link: string;
 };
 
 export const AnimatedTestimonials = ({
   testimonials,
-  
 }: {
   testimonials: Testimonial[];
   autoplay?: boolean;
@@ -30,12 +29,13 @@ export const AnimatedTestimonials = ({
 
   const isActive = (index: number) => index === active;
 
- 
-
   const randomRotateY = () => Math.floor(Math.random() * 21) - 10;
 
   return (
-    <div className="max-w-7xl mx-auto antialiased font-sans px-6 lg:px-0 " id="projects">
+    <div
+      className="max-w-7xl mx-auto antialiased font-sans px-6 lg:px-0 "
+      id="projects"
+    >
       <SparklesPreview>Projects</SparklesPreview>
       <div className="relative grid grid-cols-1 md:grid-cols-2  gap-6 md:gap-16 mt-14">
         <div>
@@ -73,7 +73,6 @@ export const AnimatedTestimonials = ({
                     <img
                       src={testimonial.src}
                       alt={testimonial.name}
-                     
                       draggable={false}
                       className="h-full w-full object-cover object-center shadow-lg"
                     />
@@ -94,7 +93,7 @@ export const AnimatedTestimonials = ({
             exit={{ y: -30, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
               <a
                 href={testimonials[active].link}
                 target="_blank"
@@ -103,7 +102,7 @@ export const AnimatedTestimonials = ({
                 {testimonials[active].name}
               </a>
             </h3>
-         
+
             <motion.p className="text-sm sm:text-base lg:text-lg text-neutral-300 mt-4 sm:mt-6">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
@@ -121,7 +120,8 @@ export const AnimatedTestimonials = ({
                 </motion.span>
               ))}
             </motion.p>
-            <div className="flex gap-2 sm:gap-4 mt-4 sm:mt-6 items-center">
+            <div className="flex items-center justify-between mt-4 sm:mt-6">
+            <div className="flex gap-2 sm:gap-4  items-center">
               <span className="text-sm sm:text-lg font-medium text-gray-300">
                 Used technologies:
               </span>
@@ -131,14 +131,13 @@ export const AnimatedTestimonials = ({
                     key={index}
                     src={icon}
                     alt={`icon-${index}`}
-                    className="h-6 w-6 sm:h-8 sm:w-8 rounded-full border-2 border-white shadow-lg hover:scale-110 transition-all duration-300"
+                    className="h-7 w-7 sm:h-8 sm:w-8 rounded-full border-2 border-white shadow-lg hover:scale-110 transition-all duration-300"
                   />
                 ))}
               </div>
             </div>
 
-            {/* View Project Button */}
-            <div className="mt-6 ">
+            <div >
               <a
                 href={testimonials[active].link}
                 target="_blank"
@@ -148,26 +147,29 @@ export const AnimatedTestimonials = ({
                 View Project
               </a>
             </div>
+</div>
+         
+
+       
           </motion.div>
 
-          {/* Navigation Buttons */}
-          <div className="flex gap-2 sm:gap-4">
-            <button
-              onClick={handlePrev}
-              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center shadow-md group/button"
-            >
-              <IconArrowLeft className="h-4 w-4 sm:h-6 sm:w-6 text-gray-700 dark:text-neutral-400 group-hover/button:scale-110 transition-transform duration-300" />
-            </button>
-            <button
-              onClick={handleNext}
-              className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center shadow-md group/button"
-            >
-              <IconArrowRight className="h-4 w-4 sm:h-6 sm:w-6 text-gray-700 dark:text-neutral-400 group-hover/button:scale-110 transition-transform duration-300" />
-            </button>
-          </div>
-        
+            {/* Navigation Buttons */}
+            <div className="flex gap-4 sm:gap-6 ">
+              <button
+                onClick={handlePrev}
+                className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gray-300 dark:bg-neutral-800 flex items-center justify-center shadow-lg hover:bg-gray-400 dark:hover:bg-neutral-700 transition-all duration-200 group"
+              >
+                <IconArrowLeft className="h-5 w-5 sm:h-7 sm:w-7 text-gray-800 dark:text-neutral-300 group-hover:scale-105 transition-transform duration-200" />
+              </button>
 
-
+              <button
+                onClick={handleNext}
+                className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gray-300 dark:bg-neutral-800 flex items-center justify-center shadow-lg hover:bg-gray-400 dark:hover:bg-neutral-700 transition-all duration-200 group"
+              >
+                <IconArrowRight className="h-5 w-5 sm:h-7 sm:w-7 text-gray-800 dark:text-neutral-300 group-hover:scale-105 transition-transform duration-200" />
+              </button>
+            </div>
+   
         </div>
       </div>
     </div>
