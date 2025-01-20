@@ -6,7 +6,6 @@ import { SparklesPreview } from "./SparklesPreview";
 type Testimonial = {
   quote: string;
   name: string;
-  designation: string;
   src: string;
   icons: string[]; 
   link: string; 
@@ -104,9 +103,7 @@ export const AnimatedTestimonials = ({
                 {testimonials[active].name}
               </a>
             </h3>
-            <p className="text-base sm:text-lg text-gray-300">
-              {testimonials[active].designation}
-            </p>
+         
             <motion.p className="text-sm sm:text-base lg:text-lg text-neutral-300 mt-4 sm:mt-6">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
@@ -141,7 +138,7 @@ export const AnimatedTestimonials = ({
             </div>
 
             {/* View Project Button */}
-            <div className="mt-6 sm:mt-8">
+            <div className="mt-6 ">
               <a
                 href={testimonials[active].link}
                 target="_blank"

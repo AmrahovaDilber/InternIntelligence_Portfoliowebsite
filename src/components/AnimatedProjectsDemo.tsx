@@ -7,7 +7,7 @@ const projectsData = [
     category: "e-commerce",
     des: "HerseyBurada is a modern e-commerce platform that offers a seamless shopping experience. Users can browse products, add them to a cart, and proceed to checkout effortlessly.",
     image: "/herseyburada.png",
-    icons: ["/react.webp", "/tailwindd.svg"],
+    icons: ["/react.webp", "/tailwindd.svg","/Firebase.png","/reacthookform.png"],
     link: "https://herseyburada.netlify.app/",
   },
   {
@@ -23,7 +23,7 @@ const projectsData = [
     title: "Dilber's Portfolio",
     link: "https://diberamrahova-portfolio.netlify.app/",
     image: "/portfolio.png",
-    icons: ["/react.webp", "/scss.png"],
+    icons: ["/react.webp", "/sass.webp","/reacthookform.png"],
     des: "A personal portfolio showcasing my projects, skills, and experience. It highlights key accomplishments, coding expertise, and includes a contact section for professional connections.",
   },
 ];
