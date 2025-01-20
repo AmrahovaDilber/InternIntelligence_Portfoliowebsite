@@ -35,7 +35,7 @@ export const AnimatedTestimonials = ({
   const randomRotateY = () => Math.floor(Math.random() * 21) - 10;
 
   return (
-    <div className="max-w-7xl mx-auto antialiased font-sans px-6 lg:px-0 ">
+    <div className="max-w-7xl mx-auto antialiased font-sans px-6 lg:px-0 " id="projects">
       <SparklesPreview>Projects</SparklesPreview>
       <div className="relative grid grid-cols-1 md:grid-cols-2  gap-6 md:gap-16 mt-14">
         <div>

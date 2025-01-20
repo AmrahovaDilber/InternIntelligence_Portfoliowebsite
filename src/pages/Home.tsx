@@ -34,14 +34,14 @@ const Home: React.FC = () => {
         backgroundAttachment: "fixed",
       }}
     >
-     <ProgressBar></ProgressBar>
+      <ProgressBar></ProgressBar>
       <MagicCursor />
       <div className="relative z-20 flex flex-col">
         <Header />
         <section className="w-full py-8">
           <AboutMe />
         </section>
-      
+
         <section className="w-full py-8">
           <Skills />
         </section>
@@ -54,8 +54,8 @@ const Home: React.FC = () => {
         <section className="w-full">
           <TimelineDemo></TimelineDemo>
         </section>
-        <section id='projects' className="w-full py-8">
-        <AnimatedTestimonialsDemo></AnimatedTestimonialsDemo>
+        <section id="projects" className="w-full py-8">
+          <AnimatedTestimonialsDemo></AnimatedTestimonialsDemo>
         </section>
         <section className="w-full py-8">
           <Contact />

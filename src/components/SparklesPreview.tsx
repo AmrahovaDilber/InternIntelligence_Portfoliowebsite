@@ -2,17 +2,16 @@
 
 import { SparklesCore } from "./sparkles";
 
-interface SparklesProps{
-    children:string
+interface SparklesProps {
+  children: string;
 }
 
-
-export const SparklesPreview:React.FC<SparklesProps>=({children})=>{
+export const SparklesPreview: React.FC<SparklesProps> = ({ children }) => {
   return (
     <div className="h-full w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
-    <h1 className="mt-16 text-center text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-violet-500 relative z-20 animate-gradient shadow-lg custom-text-shadow">
-  {children}
-</h1>
+      <h1 className="mt-16 text-center text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-violet-500 relative z-20 animate-gradient shadow-lg custom-text-shadow">
+        {children}
+      </h1>
 
       <div className="w-[40rem] h-5 relative">
         {/* Gradients */}
@@ -30,8 +29,7 @@ export const SparklesPreview:React.FC<SparklesProps>=({children})=>{
           className="w-full h-full"
           particleColor="#FFFFFF"
         />
-
       </div>
     </div>
   );
-}
+};
