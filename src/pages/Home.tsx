@@ -54,7 +54,7 @@ const Home: React.FC = () => {
         <section className="w-full">
           <TimelineDemo></TimelineDemo>
         </section>
-        <section className="w-full py-8">
+        <section id='projects' className="w-full py-8">
         <AnimatedTestimonialsDemo></AnimatedTestimonialsDemo>
         </section>
         <section className="w-full py-8">
