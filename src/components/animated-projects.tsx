@@ -120,8 +120,8 @@ export const AnimatedTestimonials = ({
                 </motion.span>
               ))}
             </motion.p>
-            <div className="flex items-center justify-between mt-4 sm:mt-6">
-            <div className="flex gap-2 sm:gap-4  items-center">
+     
+            <div className="flex gap-2 sm:gap-4  items-center mt-4 sm:mt-6"> 
               <span className="text-sm sm:text-lg font-medium text-gray-300">
                 Used technologies:
               </span>
@@ -137,7 +137,7 @@ export const AnimatedTestimonials = ({
               </div>
             </div>
 
-            <div >
+            <div  className="mt-5">
               <a
                 href={testimonials[active].link}
                 target="_blank"
@@ -147,8 +147,7 @@ export const AnimatedTestimonials = ({
                 View Project
               </a>
             </div>
-</div>
-         
+
 
        
           </motion.div>
