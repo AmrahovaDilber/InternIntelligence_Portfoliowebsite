@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { validationType } from "../type/types";
+import emailjs from '@emailjs/browser';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -10,10 +11,9 @@ const ContactForm: React.FC = () => {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const formRef = useRef<HTMLFormElement>(null);
 
-  function handleSubmitForm(e: React.FormEvent) {
-    e.preventDefault();
-
+  const validateForm = (): boolean => {
     const validationErrors: validationType = {};
 
     if (!formData.email.trim()) {
@@ -44,23 +44,57 @@ const ContactForm: React.FC = () => {
 
     setErrors(validationErrors);
 
-    if (Object.keys(validationErrors).length === 0) {
-      console.log("Form submitted successfully:", formData);
-    }
-  }
+    return Object.keys(validationErrors).length === 0;
+  };
 
-  function handleChange(
+  const sendEmail = () => {
+    if (formRef.current) {
+      emailjs
+        .sendForm(
+          "service_38l5bqr", // Replace with your service ID
+          "template_fpr4tx2", // Replace with your template ID
+          formRef.current,
+          "tLHxzJLhqO4YWH7bh" // Replace with your public key
+        )
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            alert("Your message has been sent successfully! We'll get back to you soon.");
+            setFormData({
+              firstName: "",
+              lastName: "",
+              email: "",
+              message: "",
+            }); // Clear form
+          },
+          (error) => {
+            console.error("FAILED...", error);
+            alert("Failed to send email. Please try again later.");
+          }
+        );
+    }
+  };
+
+  const handleSubmitForm = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (validateForm()) {
+      sendEmail();
+    }
+  };
+
+  const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) {
+  ) => {
     setFormData((prevFormData) => ({
       ...prevFormData,
       [e.target.name]: e.target.value,
     }));
-  }
+  };
 
   return (
     <form
-      className="max-w-[100%] sm:max-w-[50%] shadow-lg  space-y-6  bg-[rgb(23,11,42)] rounded-xl w-full  p-6"
+      ref={formRef}
+      className="max-w-[100%] sm:max-w-[50%] shadow-lg space-y-6 bg-[rgb(23,11,42)] rounded-xl w-full p-6"
       onSubmit={handleSubmitForm}
     >
       <p className="text-xl sm:text-3xl font-bold text-white mb-6 sm:mb-8 text-center leading-relaxed">
@@ -77,7 +111,6 @@ const ContactForm: React.FC = () => {
           placeholder="First Name"
           className="w-full h-12 px-4 bg-[#1a1a33] text-white rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600"
         />
-
         {errors.firstName && (
           <p className="text-sm text-red-500 mt-1">{errors.firstName}</p>
         )}
@@ -117,7 +150,7 @@ const ContactForm: React.FC = () => {
           value={formData.message}
           onChange={handleChange}
           placeholder="Message"
-          className="h-13 p-4  bg-[#1a1a33] text-white  w-full  border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500 h-24"
+          className="h-13 p-4 bg-[#1a1a33] text-white w-full border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500 h-24"
         />
         {errors.message && (
           <p className="text-sm text-red-500 mt-1">{errors.message}</p>
@@ -134,5 +167,3 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
-
-// [rgb(11,11,28)]
