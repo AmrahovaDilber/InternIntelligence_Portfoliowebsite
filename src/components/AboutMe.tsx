@@ -10,7 +10,7 @@ import { SparklesPreview } from "./SparklesPreview";
 
 const AboutMe: React.FC = () => {
   return (
-    <div id="about" className="lg:px-0 px-8 py-8 max-w-7xl mx-auto w-full">
+    <div id="about" className="lg:px-0 px-8  max-w-7xl mx-auto w-full">
       <SparklesPreview>About me</SparklesPreview>
       <motion.div
         initial="hidden"

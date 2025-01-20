@@ -116,7 +116,7 @@ const ContactForm: React.FC = () => {
           value={formData.message}
           onChange={handleChange}
           placeholder="Message"
-          className="h-13 p-4  bg-[#1a1a33] text-white  w-full  border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500 h-24"
+          className="h-13 p-4  bg-[#1a1a33] text-white  w-full  border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500 h-24"
         />
         {errors.message && (
           <p className="text-sm text-red-500 mt-1">{errors.message}</p>

@@ -9,7 +9,7 @@ const fadeInUp = {
 
 const Skills: React.FC = () => {
   return (
-    <div id="skills" className="mx-auto max-w-[1280px] mt-20 px-6 sm:px-0">
+    <div id="skills" className="mx-auto max-w-[1280px] mt-4 sm:mt-10 px-6 sm:px-0">
       <SparklesPreview>Skills</SparklesPreview>
       
       <motion.div

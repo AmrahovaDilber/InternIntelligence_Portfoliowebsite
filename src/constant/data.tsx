@@ -1,5 +1,5 @@
 import { connectionType, NavlinkProps, techType } from "../type/types";
-import { FaPhoneVolume } from "react-icons/fa6";
+// import { FaPhoneVolume } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
 import { SiLinkedin } from "react-icons/si";
 import { FaGithub } from "react-icons/fa6";
@@ -18,13 +18,13 @@ export const techs: techType[] = [
 ];
 
 export const connectionData: connectionType[] = [
-  {
-    id: 1,
-    name: "Phone",
-    infor: "+994 51 548 92 72",
-    icon: <FaPhoneVolume  size={24} />,
-    href: "tel:+994515489272",
-  },
+  // {
+  //   id: 1,
+  //   name: "Phone",
+  //   infor: "+994 51 548 92 72",
+  //   icon: <FaPhoneVolume  size={24} />,
+  //   href: "tel:+994515489272",
+  // },
   {
     id: 2,
     name: "Email",
@@ -109,10 +109,9 @@ export const projectsData = [
   {
     id: 1,
     title: "HerseyBurada",
-    category: "e-commerce",
     des: "HerseyBurada is a modern e-commerce platform that offers a seamless shopping experience. Users can browse products, add them to a cart, and proceed to checkout effortlessly.",
     image: "/herseyburada.png",
-    icons: ["/react.webp", "/tailwindd.svg"],
+    icons: ["/react.webp", "/tailwindd.svg", "/Firebase.png",'/reacthookform.png',"/geminiai.png"],
     link: "https://herseyburada.netlify.app/",
   },
   {
@@ -129,7 +128,7 @@ export const projectsData = [
     title: "Dilber's Portfolio",
     link: "https://diberamrahova-portfolio.netlify.app/",
     image: "/portfolio.png",
-    icons: ["/react.webp", "/scss.png"],
+    icons: ["/react.webp", "/sasaa.webp","/framermotion.png"],
     des: "A personal portfolio showcasing my projects, skills, and experience.It highlights key accomplishments, coding expertise, and includes a contact section for professional connections.",
   },
 ];
